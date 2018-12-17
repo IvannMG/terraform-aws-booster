@@ -9,7 +9,7 @@
 git clone git@github.com:IvannMG/terraform-aws-booster.git && cd terraform-aws-booster
 `
 
-- store your aws credentials in a file named `terraform.tfvars`
+- edit `terraform.tfvars` with your aws credentials :
 
 ```
 access_key = "{your_aws_access_key}"
