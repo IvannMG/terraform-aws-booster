@@ -25,7 +25,7 @@ provider "aws" {
   profile = "myprofile" // 2. Change this to use your aws profile name
 }
 
-module "ec2" {
+module "aws-booster" {
   source = "git::https://github.com/IvannMG/terraform-aws-booster.git?ref=master" 
 
   project_name = "my-project-name" // 3. Change this to use your aws profile name
@@ -34,21 +34,21 @@ module "ec2" {
 
 output "Public IP" {
   description = "EC2 public IP"
-  value       = "${module.ec2.public_ip}"
+  value       = "${module.aws-booster.public_ip}"
 }
 
 output "Public DNS" {
   description = "EC2 public DNS"
-  value       = "${module.ec2.public_dns}"
+  value       = "${module.aws-booster.public_dns}"
 ```
 
 Then launch terraform
 
-`
+```
 terraform init
 terraform plan
 terraform apply
-`
+```
 
 ## Inputs
 

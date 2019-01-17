@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 // 2. Configure your module
-module "ec2" {
+module "aws-booster" {
   source = "../"
 
   // project parameters
@@ -16,10 +16,10 @@ module "ec2" {
 // 3. Define your outputs
 output "Public Ip" {
   description = "EC2 public IP"
-  value       = "${module.ec2.public_ip}"
+  value       = "${module.aws-booster.public_ip}"
 }
 
 output "Public DNS" {
   description = "EC2 public DNS"
-  value       = "${module.ec2.public_dns}"
+  value       = "${module.aws-booster.public_dns}"
 }
