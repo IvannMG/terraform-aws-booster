@@ -1,5 +1,4 @@
 // 1. Define your provider
-
 provider "aws" {
   region = "eu-west-1"
   profile = "kevin"
@@ -7,7 +6,7 @@ provider "aws" {
 
 // 2. Configure your module
 module "ec2" {
-  source = "../"$
+  source = "../"
 
   // project parameters
   project_name = "overlay"

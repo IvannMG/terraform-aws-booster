@@ -2,7 +2,7 @@
 
 This plugin is made to help developer to create a free ubuntu instance in AWS.
 
-This is a really good tool for creating a POC or a personal project.
+This is a really good tool for a POC or a personal project.
 
 ## Prerequisites
 
@@ -49,5 +49,19 @@ terraform init
 terraform plan
 terraform apply
 `
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+|project_name|the project name use to name your instance / key / security groups | String | none | yes |
+|ssh_public_key|the ssh key attached to your instance to ssh on it | String | none | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| public_dns | The public instance IP |
+| public_ip | The public instance IP |
 
 Happy Coding 💪
